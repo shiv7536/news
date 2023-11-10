@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'City.dart';
 import 'City1.dart';
-import 'NewsDetail.dart';
+import 'NewsDetails.dart';
 
 class HomeNewsScreen extends StatefulWidget {
   const HomeNewsScreen({super.key});
@@ -15,6 +15,7 @@ class HomeNewsScreen extends StatefulWidget {
 class _HomeNewsScreenState extends State<HomeNewsScreen> {
   var scaffoldKey = GlobalKey<ScaffoldState>();
   bool isExpanded = false;
+  bool isExpanded2 = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +38,7 @@ class _HomeNewsScreenState extends State<HomeNewsScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Padding(
@@ -49,7 +50,7 @@ class _HomeNewsScreenState extends State<HomeNewsScreen> {
                       width: double.infinity,
                       //color: Colors.red,
                       decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black, width: 3)),
+                          border: Border.all(color: Colors.black, width: 2)),
 
                       child: Column(
                         children: [
@@ -60,7 +61,7 @@ class _HomeNewsScreenState extends State<HomeNewsScreen> {
                               });
                             },
                             child: Container(
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   border: Border(
                                       bottom: BorderSide(
                                           color: Colors.black, width: 3))),
@@ -75,144 +76,319 @@ class _HomeNewsScreenState extends State<HomeNewsScreen> {
                                       fontSize: 24,
                                     ),
                                   ),
-                                  Icon(Icons.arrow_drop_down_outlined),
+                                  const Icon(Icons.arrow_drop_down_outlined),
                                 ],
                               ),
                             ),
                           ),
                           if (isExpanded)
-                            Container(
-                              child: Column(
-                                children: [
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) => City(),
-                                          ));
-                                    },
-                                    child: Text('Fatehpur Sikri',
-                                        style: GoogleFonts.palanquin(
-                                          fontSize: 24,
-                                          fontWeight: FontWeight.w500,
-                                          letterSpacing: 5,
-                                        )),
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) => City(),
-                                          ));
-                                    },
-                                    child: Text('Gurugram',
-                                        style: GoogleFonts.palanquin(
-                                          fontSize: 24,
-                                          fontWeight: FontWeight.w500,
-                                          letterSpacing: 5,
-                                        )),
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) => City(),
-                                          ));
-                                    },
-                                    child: Text('Mathura',
-                                        style: GoogleFonts.palanquin(
-                                          fontSize: 24,
-                                          fontWeight: FontWeight.w500,
-                                          letterSpacing: 5,
-                                        )),
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) => City(),
-                                          ));
-                                    },
-                                    child: Text('Jaipur ',
-                                        style: GoogleFonts.palanquin(
-                                          fontSize: 24,
-                                          fontWeight: FontWeight.w500,
-                                          letterSpacing: 5,
-                                        )),
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) => City(),
-                                          ));
-                                    },
-                                    child: Text('Noida',
-                                        style: GoogleFonts.palanquin(
-                                          fontSize: 24,
-                                          fontWeight: FontWeight.w500,
-                                          letterSpacing: 5,
-                                        )),
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) => City(),
-                                          ));
-                                    },
-                                    child: Text('Alwar',
-                                        style: GoogleFonts.palanquin(
-                                          fontSize: 24,
-                                          fontWeight: FontWeight.w500,
-                                          letterSpacing: 5,
-                                        )),
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) => City(),
-                                          ));
-                                    },
-                                    child: Text('Ajmer',
-                                        style: GoogleFonts.palanquin(
-                                          fontSize: 24,
-                                          fontWeight: FontWeight.w500,
-                                          letterSpacing: 5,
-                                        )),
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) => City1(),
-                                          ));
-                                    },
-                                    child: Text('Agra',
-                                        style: GoogleFonts.palanquin(
-                                          fontSize: 24,
-                                          fontWeight: FontWeight.w500,
-                                          letterSpacing: 5,
-                                        )),
-                                  ),
-                                ],
-                              ),
+                            Column(
+                              children: [
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => City(),
+                                        ));
+                                  },
+                                  child: Text('Fatehpur Sikri',
+                                      style: GoogleFonts.palanquin(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 2,
+                                      )),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => City(),
+                                        ));
+                                  },
+                                  child: Text('Gurugram',
+                                      style: GoogleFonts.palanquin(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 2,
+                                      )),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const City(),
+                                        ));
+                                  },
+                                  child: Text('Mathura',
+                                      style: GoogleFonts.palanquin(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 2,
+                                      )),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const City(),
+                                        ));
+                                  },
+                                  child: Text('Jaipur ',
+                                      style: GoogleFonts.palanquin(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 2,
+                                      )),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const City(),
+                                        ));
+                                  },
+                                  child: Text('Noida',
+                                      style: GoogleFonts.palanquin(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 2,
+                                      )),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const City(),
+                                        ));
+                                  },
+                                  child: Text('Alwar',
+                                      style: GoogleFonts.palanquin(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 2,
+                                      )),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const City(),
+                                        ));
+                                  },
+                                  child: Text('Ajmer',
+                                      style: GoogleFonts.palanquin(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 2,
+                                      )),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const City1(),
+                                        ));
+                                  },
+                                  child: Text('Agra',
+                                      style: GoogleFonts.palanquin(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 2,
+                                      )),
+                                ),
+
+                              ],
                             )
                         ],
                       ),
                     ),
+
                   ),
                 ),
                 SizedBox(
+                  height: 20,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10, right: 10),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Container(
+                      // height: 60,
+                      width: double.infinity,
+                      //color: Colors.red,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black, width: 2)),
+
+                      child: Column(
+                        children: [
+                          InkWell(
+                            onTap: () {
+                              setState(() {
+                                isExpanded = !isExpanded;
+                              });
+                            },
+                            child: Container(
+                              decoration: const BoxDecoration(
+                                  border: Border(
+                                      bottom: BorderSide(
+                                          color: Colors.black, width: 3))),
+                              child: Row(
+                                mainAxisAlignment:
+                                MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'Cities',
+                                    style: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 24,
+                                    ),
+                                  ),
+                                  const Icon(Icons.arrow_drop_down_outlined),
+                                ],
+                              ),
+                            ),
+                          ),
+                          if (isExpanded)
+                            Column(
+                              children: [
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => City(),
+                                        ));
+                                  },
+                                  child: Text('Fatehpur Sikri',
+                                      style: GoogleFonts.palanquin(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 2,
+                                      )),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => City(),
+                                        ));
+                                  },
+                                  child: Text('Gurugram',
+                                      style: GoogleFonts.palanquin(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 2,
+                                      )),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const City(),
+                                        ));
+                                  },
+                                  child: Text('Mathura',
+                                      style: GoogleFonts.palanquin(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 2,
+                                      )),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const City(),
+                                        ));
+                                  },
+                                  child: Text('Jaipur ',
+                                      style: GoogleFonts.palanquin(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 2,
+                                      )),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const City(),
+                                        ));
+                                  },
+                                  child: Text('Noida',
+                                      style: GoogleFonts.palanquin(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 2,
+                                      )),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const City(),
+                                        ));
+                                  },
+                                  child: Text('Alwar',
+                                      style: GoogleFonts.palanquin(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 2,
+                                      )),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const City(),
+                                        ));
+                                  },
+                                  child: Text('Ajmer',
+                                      style: GoogleFonts.palanquin(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 2,
+                                      )),
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const City1(),
+                                        ));
+                                  },
+                                  child: Text('Agra',
+                                      style: GoogleFonts.palanquin(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 2,
+                                      )),
+                                ),
+
+                              ],
+                            )
+                        ],
+                      ),
+                    ),
+
+                  ),
+                ),
+                const SizedBox(
                   height: 20,
                 ),
                 Padding(
@@ -228,11 +404,11 @@ class _HomeNewsScreenState extends State<HomeNewsScreen> {
                           InkWell(
                             onTap: () {
                               setState(() {
-                                //isExpanded = !isExpanded;
+                                isExpanded2 = !isExpanded2;
                               });
                             },
                             child: Container(
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   border: Border(
                                       bottom: BorderSide(
                                           color: Colors.black, width: 3))),
@@ -247,14 +423,13 @@ class _HomeNewsScreenState extends State<HomeNewsScreen> {
                                       fontSize: 24,
                                     ),
                                   ),
-                                  Icon(Icons.arrow_drop_down_outlined),
+                                  const Icon(Icons.arrow_drop_down_outlined),
                                 ],
                               ),
                             ),
                           ),
-                          //if (isExpanded)
-                          Container(
-                            child: Column(
+                          if (isExpanded2)
+                            Column(
                               children: [
                                 Text('Celebrity Gossip & Social',
                                     style: GoogleFonts.palanquin(
@@ -347,16 +522,18 @@ class _HomeNewsScreenState extends State<HomeNewsScreen> {
                                       letterSpacing: 2,
                                     )),
                               ],
-                            ),
-                          )
+                            )
                         ],
                       ),
                     ),
                   ),
                 )
               ],
+
             ),
+
           ),
+
         ),
       ),
       appBar: AppBar(
@@ -394,7 +571,7 @@ class _HomeNewsScreenState extends State<HomeNewsScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => NewDetails(),
+                            builder: (context) => NewDetails(index: 1),
                           ));
                     },
                     child: Container(

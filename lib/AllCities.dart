@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:news/NewsDetails.dart';
 
 class AllCity extends StatefulWidget {
   const AllCity({super.key});
@@ -33,23 +34,31 @@ class _AllCityState extends State<AllCity> {
       body: SingleChildScrollView(
         child: Column(
 
+
           children: [
 
             ListView.builder(physics: NeverScrollableScrollPhysics(),shrinkWrap: true,itemCount: citiesName.length,itemBuilder: (context, index) {
-              return Container(
+              return InkWell(
+                onTap: (){
+
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => NewDetails(index: index),));
+                },
+                child: Container(
 alignment: Alignment.center,
 
 
-                height: 75,
-                width: double.infinity,
-                decoration: BoxDecoration(color: Colors.indigo,border: Border.all(color: Colors.white,width: 3),borderRadius: BorderRadius.circular(20)),
-                child: Text('${citiesName[index]}',style: GoogleFonts.poppins(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w400)),
+                  height: 75,
+                  width: double.infinity,
+                  decoration: BoxDecoration(color: Colors.indigo,border: Border.all(color: Colors.white,width: 3),borderRadius: BorderRadius.circular(20)),
+                  child: Text('${citiesName[index]}',style: GoogleFonts.poppins(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w400)),
+
+                ),
               );
             },)
 
           ],
-         
-          
+
+
         ),
       ),
     );

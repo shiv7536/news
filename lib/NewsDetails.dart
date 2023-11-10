@@ -5,7 +5,8 @@ import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
 
 class NewDetails extends StatefulWidget {
-  const NewDetails({super.key});
+   NewDetails({ required this.index,super.key});
+  int index;
 
   @override
   State<NewDetails> createState() => _NewDetailsState();
@@ -18,7 +19,7 @@ class _NewDetailsState extends State<NewDetails> {
       appBar: AppBar(elevation: 0,
         backgroundColor: Colors.indigo,
         centerTitle: true,
-        title: Text('News Details',style: GoogleFonts.poppins(fontSize: 24,fontWeight: FontWeight.bold),),
+        title: Text('News Details${widget.index}',style: GoogleFonts.poppins(fontSize: 24,fontWeight: FontWeight.bold),),
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 15,right: 15),

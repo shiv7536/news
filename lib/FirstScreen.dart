@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:news/BottomNavBarCustom.dart';
 
 import 'Login.dart';
 
@@ -19,7 +20,7 @@ class _FirstScreenState extends State<FirstScreen> {
     Timer(
         Duration(seconds: 3),
             () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => Login())));
+            context, MaterialPageRoute(builder: (context) =>Login())));
   }
 
   @override
